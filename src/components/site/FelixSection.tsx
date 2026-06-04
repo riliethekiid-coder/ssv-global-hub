@@ -42,16 +42,33 @@ const services = [
 
 export function FelixSection() {
   return (
-    <section id="felix" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="felix" className="py-24 lg:py-32 bg-gradient-to-b from-secondary/40 to-background">
       <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
-          <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Section A</div>
-          <h2 className="mt-3 font-display text-4xl lg:text-5xl text-foreground text-balance">
+          <div className="flex items-center gap-3">
+            <div className="h-14 w-14 rounded-full bg-gradient-to-br from-primary to-navy text-primary-foreground flex items-center justify-center shadow-lg ring-2 ring-accent/30">
+              <Building className="h-6 w-6" strokeWidth={2.25} />
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Section A</div>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-accent mt-0.5">Subsidiary 01</p>
+            </div>
+          </div>
+          <h2 className="mt-6 font-display text-4xl lg:text-5xl text-foreground text-balance">
             Felix Olorunda <span className="italic text-accent">& Co.</span>
           </h2>
           <p className="mt-2 text-sm uppercase tracking-[0.18em] text-muted-foreground">
             Estate Surveyors & Valuers
           </p>
+
+          <div className="mt-6 rounded-xl overflow-hidden border border-border shadow-md group">
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80"
+              alt="Architectural blueprints and surveyor's plans"
+              className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
+
           <p className="mt-6 text-muted-foreground leading-relaxed">
             A professional valuation practice built on independence, technical rigour,
             and institutional trust. We deliver fair, defensible opinions of value across
