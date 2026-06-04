@@ -33,7 +33,7 @@ const cards = [
 
 export function SubsidiaryGrid() {
   return (
-    <section id="subsidiaries" className="py-20 lg:py-28 bg-background">
+    <section id="subsidiaries" className="py-20 lg:py-28 bg-gradient-to-b from-background to-secondary/40">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
           <div>
@@ -58,17 +58,23 @@ export function SubsidiaryGrid() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.55, delay: i * 0.08 }}
               whileHover={{ y: -8 }}
-              className="group relative text-left rounded-xl border border-border bg-card p-7 overflow-hidden hover:shadow-[0_30px_60px_-30px_rgba(15,23,42,0.35)] transition-shadow"
+              className="group relative text-left rounded-2xl border border-border bg-card overflow-hidden hover:shadow-[0_30px_60px_-30px_rgba(15,23,42,0.35)] transition-shadow"
             >
-              <div className={`absolute -top-24 -right-24 h-56 w-56 rounded-full bg-gradient-to-br ${c.accent} blur-2xl opacity-70`} />
-              <div className="relative">
-                <div className="flex items-center justify-between">
-                  <div className="h-11 w-11 rounded-sm bg-primary text-primary-foreground flex items-center justify-center">
-                    <c.icon className="h-5 w-5" />
-                  </div>
-                  <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-accent group-hover:rotate-12 transition-all" />
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy-deep/20 to-transparent" />
+                <div className={`absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br ${c.accent} blur-2xl opacity-70`} />
+                <div className="absolute top-4 left-4 h-12 w-12 rounded-full bg-background/95 backdrop-blur ring-1 ring-accent/40 flex items-center justify-center text-primary shadow-lg">
+                  <c.icon className="h-5 w-5" strokeWidth={2.25} />
                 </div>
-                <div className="mt-6 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{c.tag}</div>
+                <ArrowUpRight className="absolute top-4 right-4 h-5 w-5 text-white/80 group-hover:text-accent group-hover:rotate-12 transition-all" />
+              </div>
+              <div className="relative p-7">
+                <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{c.tag}</div>
                 <h3 className="mt-2 font-display text-2xl text-foreground leading-snug">{c.name}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
                 <div className="mt-6 inline-flex items-center text-sm font-medium text-foreground border-b border-accent/60 pb-0.5">
