@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Network } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -36,11 +36,12 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
-        <button onClick={() => go("hub")} className="group flex items-center gap-2">
-          <span className="h-7 w-7 rounded-sm bg-primary flex items-center justify-center text-primary-foreground text-[11px] font-semibold tracking-tight">
-            SSV
+        <button onClick={() => go("hub")} className="group flex items-center gap-2.5">
+          <span className="relative h-9 w-9 rounded-md bg-gradient-to-br from-primary to-navy flex items-center justify-center text-primary-foreground shadow-sm ring-1 ring-accent/30">
+            <Network className="h-4.5 w-4.5" strokeWidth={2.25} />
+            <span className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full bg-accent ring-2 ring-background" />
           </span>
-          <span className="font-display text-base sm:text-lg tracking-[0.18em] text-foreground">
+          <span className="font-sans text-sm sm:text-[15px] font-bold tracking-[0.22em] text-foreground leading-none">
             SSV GROUP <span className="text-accent">GLOBAL</span>
           </span>
         </button>
