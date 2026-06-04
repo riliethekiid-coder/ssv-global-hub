@@ -1,12 +1,12 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
-import { Check, MapPin, Bed, Square } from "lucide-react";
+import { Check, MapPin, Bed, Square, Layers } from "lucide-react";
 
 const properties = [
-  { name: "Allen Heights Residences", loc: "Ikeja, Lagos", beds: 4, sqft: "320 sqm", tag: "Luxury Residential" },
-  { name: "Centage Corporate Tower", loc: "Allen Avenue, Lagos", beds: 0, sqft: "2,400 sqm", tag: "Grade-A Office" },
-  { name: "The Sapphire Villas", loc: "Lekki Phase 1", beds: 5, sqft: "480 sqm", tag: "Smart Homes" },
-  { name: "Aurelia Mixed-Use", loc: "Victoria Island", beds: 3, sqft: "180 sqm", tag: "Live · Work · Play" },
+  { name: "Allen Heights Residences", loc: "Ikeja, Lagos", beds: 4, sqft: "320 sqm", tag: "Luxury Residential", img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" },
+  { name: "Centage Corporate Tower", loc: "Allen Avenue, Lagos", beds: 0, sqft: "2,400 sqm", tag: "Grade-A Office", img: "https://images.unsplash.com/photo-1577760258779-e787a1733016?auto=format&fit=crop&w=900&q=80" },
+  { name: "The Sapphire Villas", loc: "Lekki Phase 1", beds: 5, sqft: "480 sqm", tag: "Smart Homes", img: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80" },
+  { name: "Aurelia Mixed-Use", loc: "Victoria Island", beds: 3, sqft: "180 sqm", tag: "Live · Work · Play", img: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=900&q=80" },
 ];
 
 const facilities = [
@@ -29,20 +29,39 @@ const timeline = [
 
 export function ConcernsSection() {
   return (
-    <section id="concerns" className="py-24 lg:py-32 bg-background">
+    <section id="concerns" className="py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/40">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
-        <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Section B</div>
-          <h2 className="mt-3 font-display text-4xl lg:text-5xl text-foreground text-balance">
-            SSV Concerns <span className="text-accent">Ventures</span>
-          </h2>
-          <p className="mt-2 text-sm uppercase tracking-[0.18em] text-muted-foreground">
-            Real Estate · Facilities Management · Developers
-          </p>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
-            A full-service real estate enterprise — developing, managing, and curating
-            premium environments across residential, commercial, and mixed-use sectors.
-          </p>
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-7">
+            <div className="flex items-center gap-3">
+              <div className="h-14 w-14 rounded-full bg-gradient-to-br from-emerald-accent to-primary text-primary-foreground flex items-center justify-center shadow-lg ring-2 ring-emerald-accent/30">
+                <Layers className="h-6 w-6" strokeWidth={2.25} />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Section B</div>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-emerald-accent mt-0.5">Subsidiary 02</p>
+              </div>
+            </div>
+            <h2 className="mt-6 font-display text-4xl lg:text-5xl text-foreground text-balance">
+              SSV Concerns <span className="text-accent">Ventures</span>
+            </h2>
+            <p className="mt-2 text-sm uppercase tracking-[0.18em] text-muted-foreground">
+              Real Estate · Facilities Management · Developers
+            </p>
+            <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
+              A full-service real estate enterprise — developing, managing, and curating
+              premium environments across residential, commercial, and mixed-use sectors.
+            </p>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="rounded-2xl overflow-hidden border border-border shadow-lg group">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=80"
+                alt="Modern luxury residential development"
+                className="w-full h-64 lg:h-72 object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+          </div>
         </div>
 
         <Tabs defaultValue="real-estate" className="mt-12">
@@ -67,11 +86,16 @@ export function ConcernsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.07 }}
-                  className="group rounded-xl overflow-hidden border border-border bg-card hover:shadow-xl transition-shadow"
+                  className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-xl transition-shadow"
                 >
-                  <div className="relative h-44 hero-radial overflow-hidden">
-                    <div className="absolute inset-0 bg-grid opacity-50" />
-                    <div className="absolute bottom-3 left-3 text-[10px] uppercase tracking-wider bg-accent text-accent-foreground px-2 py-1 rounded-sm">
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 to-transparent" />
+                    <div className="absolute bottom-3 left-3 text-[10px] uppercase tracking-wider bg-accent text-accent-foreground px-2 py-1 rounded-sm shadow">
                       {p.tag}
                     </div>
                   </div>

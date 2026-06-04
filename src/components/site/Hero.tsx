@@ -7,6 +7,14 @@ export function Hero() {
 
   return (
     <section id="hub" className="relative hero-radial text-white overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+          alt="Modern corporate skyscraper"
+          className="h-full w-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/95 to-navy-deep/70" />
+      </div>
       <div className="absolute inset-0 bg-grid opacity-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
       <div className="relative max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
         <motion.div
