@@ -8,6 +8,7 @@ import {
   PackageSearch,
   Camera,
   ShieldAlert,
+  ShieldCheck,
 } from "lucide-react";
 
 const services = [
@@ -24,13 +25,29 @@ const services = [
 export function ProtectionSection() {
   return (
     <section id="protection" className="relative py-24 lg:py-32 bg-navy-deep text-white overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=2000&q=80"
+          alt="Security operations control room"
+          className="h-full w-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy-deep/95 to-navy/80" />
+      </div>
       <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute inset-0 hero-radial opacity-50" />
+      <div className="absolute inset-0 hero-radial opacity-40" />
       <div className="relative max-w-7xl mx-auto px-5 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
           <div className="lg:col-span-7">
-            <div className="text-xs uppercase tracking-[0.2em] text-accent">Section C</div>
-            <h2 className="mt-3 font-display text-4xl lg:text-5xl text-balance">
+            <div className="flex items-center gap-3">
+              <div className="h-14 w-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center shadow-lg ring-2 ring-accent/40">
+                <ShieldCheck className="h-6 w-6" strokeWidth={2.25} />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-[0.2em] text-accent">Section C</div>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-white/60 mt-0.5">Subsidiary 03</p>
+              </div>
+            </div>
+            <h2 className="mt-6 font-display text-4xl lg:text-5xl text-balance">
               SSV Protection Services <span className="text-accent">Ltd.</span>
             </h2>
             <p className="mt-2 text-sm uppercase tracking-[0.18em] text-white/60">
