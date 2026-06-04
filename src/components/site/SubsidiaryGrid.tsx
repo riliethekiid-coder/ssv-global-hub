@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Building2, Landmark, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { Building2, Layers, ShieldCheck, ArrowUpRight } from "lucide-react";
 
 const cards = [
   {
@@ -7,7 +7,8 @@ const cards = [
     name: "Felix Olorunda & Co",
     tag: "Estate Surveyors & Valuers",
     desc: "Independent professional valuation, asset advisory, and statutory reporting for institutions, banks, and private clients.",
-    icon: Landmark,
+    icon: Building2,
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
     accent: "from-accent/30 to-accent/0",
   },
   {
@@ -15,7 +16,8 @@ const cards = [
     name: "SSV Concerns Ventures",
     tag: "Real Estate · Facilities · Developers",
     desc: "Integrated property development, premium real estate, and full-spectrum facilities management.",
-    icon: Building2,
+    icon: Layers,
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
     accent: "from-emerald-accent/30 to-emerald-accent/0",
   },
   {
@@ -24,6 +26,7 @@ const cards = [
     tag: "Security & Surveillance",
     desc: "Executive protection, security consultancy, surveillance systems, and integrated risk operations.",
     icon: ShieldCheck,
+    image: "https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1200&q=80",
     accent: "from-slate-cool/40 to-slate-cool/0",
   },
 ];
