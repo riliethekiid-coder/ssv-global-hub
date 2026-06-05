@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Building2, Layers, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import logoBlue from "@/assets/ssv-logo-blue.png.asset.json";
+import logoGold from "@/assets/ssv-logo-gold.png.asset.json";
 
 const cards = [
   {
@@ -7,7 +9,7 @@ const cards = [
     name: "Felix Olorunda & Co",
     tag: "Estate Surveyors & Valuers",
     desc: "Independent professional valuation, asset advisory, and statutory reporting for institutions, banks, and private clients.",
-    icon: Building2,
+    logo: logoBlue.url,
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
     accent: "from-accent/30 to-accent/0",
   },
@@ -16,7 +18,7 @@ const cards = [
     name: "SSV Concerns Ventures",
     tag: "Real Estate · Facilities · Developers",
     desc: "Integrated property development, premium real estate, and full-spectrum facilities management.",
-    icon: Layers,
+    logo: logoBlue.url,
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
     accent: "from-emerald-accent/30 to-emerald-accent/0",
   },
@@ -25,8 +27,8 @@ const cards = [
     name: "SSV Protection Services Ltd",
     tag: "Security & Surveillance",
     desc: "Executive protection, security consultancy, surveillance systems, and integrated risk operations.",
-    icon: ShieldCheck,
-    image: "https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1200&q=80",
+    logo: logoGold.url,
+    image: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?auto=format&fit=crop&w=1200&q=80",
     accent: "from-slate-cool/40 to-slate-cool/0",
   },
 ];
