@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, BadgeCheck, ChevronDown } from "lucide-react";
+import felixHeadshot from "@/assets/felix-olorunda.png.asset.json";
 
 export function Hero() {
   const go = (id: string) =>
