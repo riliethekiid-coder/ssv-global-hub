@@ -5,6 +5,7 @@ import { SubsidiaryGrid } from "@/components/site/SubsidiaryGrid";
 import { FelixSection } from "@/components/site/FelixSection";
 import { ConcernsSection } from "@/components/site/ConcernsSection";
 import { ProtectionSection } from "@/components/site/ProtectionSection";
+import { LeadershipSection } from "@/components/site/LeadershipSection";
 import { ContactSection } from "@/components/site/ContactSection";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
