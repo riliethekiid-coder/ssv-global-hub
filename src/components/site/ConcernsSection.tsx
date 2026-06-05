@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { Check, MapPin, Bed, Square, Layers } from "lucide-react";
+import logoBlue from "@/assets/ssv-logo-blue.png.asset.json";
 
 const properties = [
   { name: "Allen Heights Residences", loc: "Ikeja, Lagos", beds: 4, sqft: "320 sqm", tag: "Luxury Residential", img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" },
