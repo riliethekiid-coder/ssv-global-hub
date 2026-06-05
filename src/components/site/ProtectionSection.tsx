@@ -39,8 +39,8 @@ export function ProtectionSection() {
         <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
-              <div className="h-14 w-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center shadow-lg ring-2 ring-accent/40">
-                <ShieldCheck className="h-6 w-6" strokeWidth={2.25} />
+              <div className="h-14 w-14 rounded-lg bg-navy-deep/40 ring-1 ring-accent/40 flex items-center justify-center shadow-lg p-1.5">
+                <img src={logoGold.url} alt="SSV Protection Services" className="h-full w-full object-contain" />
               </div>
               <div>
                 <div className="text-xs uppercase tracking-[0.2em] text-accent">Section C</div>
