@@ -40,6 +40,7 @@ function Index() {
         <FelixSection />
         <ConcernsSection />
         <ProtectionSection />
+        <LeadershipSection />
         <ContactSection />
       </main>
       <Footer />
