@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Network } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoBlue from "@/assets/ssv-logo-blue.png.asset.json";
 
 const links = [
   { label: "Home / Hub", id: "hub" },
@@ -37,12 +38,12 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
         <button onClick={() => go("hub")} className="group flex items-center gap-2.5">
-          <span className="relative h-9 w-9 rounded-md bg-gradient-to-br from-primary to-navy flex items-center justify-center text-primary-foreground shadow-sm ring-1 ring-accent/30">
-            <Network className="h-4.5 w-4.5" strokeWidth={2.25} />
-            <span className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full bg-accent ring-2 ring-background" />
+          <span className="relative h-10 w-10 rounded-md bg-white flex items-center justify-center shadow-sm ring-1 ring-border overflow-hidden">
+            <img src={logoBlue.url} alt="SSV Group Global" className="h-8 w-8 object-contain" />
           </span>
-          <span className="font-sans text-sm sm:text-[15px] font-bold tracking-[0.22em] text-foreground leading-none">
+          <span className="font-sans text-sm sm:text-[15px] font-bold tracking-[0.22em] text-foreground leading-none flex items-center gap-1.5">
             SSV GROUP <span className="text-accent">GLOBAL</span>
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent ml-0.5" />
           </span>
         </button>
 
