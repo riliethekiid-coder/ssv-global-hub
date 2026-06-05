@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { Scale, Factory, FileText, Briefcase, Building, LineChart } from "lucide-react";
+import logoBlue from "@/assets/ssv-logo-blue.png.asset.json";
 
 const services = [
   {
