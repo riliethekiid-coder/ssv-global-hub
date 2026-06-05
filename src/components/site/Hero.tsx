@@ -77,8 +77,12 @@ export function Hero() {
             <div className="absolute -top-px left-8 right-8 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
             <div className="flex items-start gap-5">
               <div className="relative shrink-0">
-                <div className="h-20 w-20 rounded-full bg-gradient-to-br from-accent/80 to-emerald-accent flex items-center justify-center text-2xl font-display text-navy-deep">
-                  FO
+                <div className="h-20 w-20 rounded-full overflow-hidden ring-2 ring-accent/60 shadow-lg bg-gradient-to-br from-accent/80 to-emerald-accent">
+                  <img
+                    src={felixHeadshot.url}
+                    alt="ESV Felix Olorunda, Group Chief Executive"
+                    className="h-full w-full object-cover object-top"
+                  />
                 </div>
                 <BadgeCheck className="absolute -bottom-1 -right-1 h-6 w-6 text-accent bg-navy-deep rounded-full p-0.5" />
               </div>
