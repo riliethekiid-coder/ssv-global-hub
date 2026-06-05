@@ -35,8 +35,8 @@ export function ConcernsSection() {
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
-              <div className="h-14 w-14 rounded-full bg-gradient-to-br from-emerald-accent to-primary text-primary-foreground flex items-center justify-center shadow-lg ring-2 ring-emerald-accent/30">
-                <Layers className="h-6 w-6" strokeWidth={2.25} />
+              <div className="h-14 w-14 rounded-lg bg-white ring-1 ring-border flex items-center justify-center shadow-md p-1.5">
+                <img src={logoBlue.url} alt="SSV Concerns Ventures" className="h-full w-full object-contain" />
               </div>
               <div>
                 <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Section B</div>
