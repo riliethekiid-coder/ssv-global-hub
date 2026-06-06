@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import faviconAsset from "../assets/ssv-logo-gold.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -77,20 +78,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "SSV Concerns Ventures" },
+      {
+        name: "description",
+        content:
+          "SSV Concerns Ventures — the corporate umbrella uniting Felix Olorunda & Co, SSV Concerns Ventures, and SSV Protection Services Ltd. Delivering institutional-grade valuation, real estate, and protection services.",
+      },
+      { name: "author", content: "SSV Group Global" },
+      { property: "og:title", content: "SSV Concerns Ventures" },
+      {
+        property: "og:description",
+        content:
+          "A multidisciplinary corporate umbrella delivering valuation, real estate, and protection services with institutional discipline.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:site_name", content: "SSV Group Global" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: faviconAsset.url },
+      { rel: "apple-touch-icon", href: faviconAsset.url },
     ],
   }),
   shellComponent: RootShell,
