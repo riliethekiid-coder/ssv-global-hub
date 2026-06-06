@@ -11,7 +11,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import faviconAsset from "../assets/ssv-logo-gold.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -78,27 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SSV Concerns Ventures" },
-      {
-        name: "description",
-        content:
-          "SSV Concerns Ventures — the corporate umbrella uniting Felix Olorunda & Co, SSV Concerns Ventures, and SSV Protection Services Ltd. Delivering institutional-grade valuation, real estate, and protection services.",
-      },
-      { name: "author", content: "SSV Group Global" },
-      { property: "og:title", content: "SSV Concerns Ventures" },
-      {
-        property: "og:description",
-        content:
-          "A multidisciplinary corporate umbrella delivering valuation, real estate, and protection services with institutional discipline.",
-      },
+      { title: "SSV GROUP GLOBAL" },
+      { name: "description", content: "Strategic business solutions and integrated enterprise management for global ventures.⁠" },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "SSV GROUP GLOBAL" },
+      { property: "og:description", content: "Strategic business solutions and integrated enterprise management for global ventures.⁠" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "SSV Group Global" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "SSV GROUP GLOBAL" },
+      { name: "twitter:description", content: "Strategic business solutions and integrated enterprise management for global ventures.⁠" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/R2lc8xLn9RYBsPsrUsZvxjgRGFm1/social-images/social-1780775900822-A743CEA0-EE67-4732-B32F-331F4C6FA1C1.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/R2lc8xLn9RYBsPsrUsZvxjgRGFm1/social-images/social-1780775900822-A743CEA0-EE67-4732-B32F-331F4C6FA1C1.webp" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: faviconAsset.url },
-      { rel: "apple-touch-icon", href: faviconAsset.url },
+      {
+        rel: "stylesheet",
+        href: appCss,
+      },
     ],
   }),
   shellComponent: RootShell,
