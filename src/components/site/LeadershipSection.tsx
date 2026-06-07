@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Shield, Building2, Briefcase, Quote } from "lucide-react";
-import felixHeadshot from "@/assets/felix-olorunda.png.asset.json";
+const felixHeadshot = { url: "/felix-olorunda.png" };
 
 const credentials = [
   { icon: Award, label: "ANIVS", desc: "Chartered Valuer" },

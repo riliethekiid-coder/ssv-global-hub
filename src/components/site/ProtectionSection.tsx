@@ -9,7 +9,7 @@ import {
   Camera,
   ShieldAlert,
 } from "lucide-react";
-import logoGold from "@/assets/ssv-logo-gold.png.asset.json";
+const logoGold = { url: "/ssv-logo-gold.png" };
 
 const services = [
   { icon: GraduationCap, title: "Security Training & Consultancy", desc: "Tactical training, executive briefings, and bespoke security consultancy for corporate teams and private clients." },
