@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import logoBlue from "@/assets/ssv-logo-blue.png.asset.json";
-import logoGold from "@/assets/ssv-logo-gold.png.asset.json";
+const logoBlue = { url: "/ssv-logo-blue.png" };
+const logoGold = { url: "/ssv-logo-gold.png" };
 
 const cards = [
   {

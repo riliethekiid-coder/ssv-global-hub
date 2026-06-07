@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoBlue from "@/assets/ssv-logo-blue.png.asset.json";
+const logoBlue = { url: "/ssv-logo-blue.png" };
 
 const links = [
   { label: "Home / Hub", id: "hub" },
